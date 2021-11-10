@@ -20,12 +20,14 @@ namespace PatientGroupDetection.Controllers
             {
                 var patientRepository = new PatientRepository();
                 var count = patientRepository.GetPatientGroupCount(personMatrix.Matrix);
+                return count;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
             }
             return 0;
+            
         }
     }
 }
